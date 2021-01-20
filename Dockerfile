@@ -51,4 +51,4 @@ run --mount=type=ssh git clone git@github.com:NVIDIA/thrust.git
 
 copy entrypoint.sh /entrypoint.sh
 
-#entrypoint [ "/entrypoint.sh" ]
+entrypoint [ "/entrypoint.sh" ]
