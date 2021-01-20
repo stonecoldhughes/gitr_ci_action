@@ -1,6 +1,5 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
-echo "Captain! ${GITHUB_WORKSPACE}"
 pushd ${GITHUB_WORKSPACE}/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
@@ -56,3 +55,4 @@ pushd ${GITHUB_WORKSPACE}/build && \
      -DNETCDF_LIBRARY=/usr/local/lib/libnetcdf.so \
      -DNETCDF_CXX_LIBRARY=/netcdf-cxx4/src/netcdf-cxx4-build/cxx4/libnetcdf-cxx4.so \
      .. && make -j 4 && make install
+# Captain! All these file locations are wrong
