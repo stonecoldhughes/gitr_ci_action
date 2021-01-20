@@ -8,6 +8,8 @@ run [ "bash", "-c", \
         apt-get install -y mpich && \
         apt-get install -y libhdf5-dev && \
         apt-get install -y cmake && \
+        apt-get install -y git && \
+        apt-get install -y g++ && \
         apt-get install -y m4 " ]
 
 copy entrypoint.sh /entrypoint.sh
