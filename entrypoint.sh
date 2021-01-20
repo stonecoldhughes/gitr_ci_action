@@ -1,6 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
-pwd
+echo "Captain! ${GITHUB_WORKSPACE}"
 pushd /GITR/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
