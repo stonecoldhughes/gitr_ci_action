@@ -1,5 +1,11 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
+echo ${GITHUB_WORKSPACE}/libconfig
+if test -f "${GITHUB_WORKSPACE}/libconfig"; then
+      echo "Captain! libconfig exists!"
+else
+      echo "Captain! libconfig does not exist..."
+fi
 pushd ${GITHUB_WORKSPACE}/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
