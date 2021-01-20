@@ -1,4 +1,4 @@
 name: 'build GITR'
 runs:
   using: 'docker'
-  image: 'ci.df'
+  image: './Dockerfile'
