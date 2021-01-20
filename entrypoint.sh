@@ -1,6 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
-pushd build && \
+pushd /GITR/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
      -DUSEIONIZATION=0 \
