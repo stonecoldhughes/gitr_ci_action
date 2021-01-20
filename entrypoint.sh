@@ -1,7 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
-echo ${GITHUB_WORKSPACE}/libconfig
-if test -f "${GITHUB_WORKSPACE}/libconfig"; then
+if test -f "/libconfig"; then
       echo "Captain! libconfig exists!"
 else
       echo "Captain! libconfig does not exist..."
@@ -57,4 +56,3 @@ pushd ${GITHUB_WORKSPACE}/build && \
      -DNETCDF_CXX_INCLUDE_DIR=/usr/local/include \
      -DNETCDF_CXX_LIBRARY=/usr/local/lib/libnetcdf-cxx4.so \
      .. && make -j 4 && make install
-# Captain! All these file locations are wrong
