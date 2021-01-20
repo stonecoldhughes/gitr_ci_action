@@ -13,7 +13,7 @@ run [ "bash", "-c", \
         apt-get install -y m4 " ]
 
 # clone
-run --mount=type=ssh git clone git@github.com:hyperrealm/libconfig.git
+run git clone git@github.com:hyperrealm/libconfig.git
 
 # build - this uses the newest version, not the one tested
  run ["bash", "-c", \
@@ -24,7 +24,7 @@ run --mount=type=ssh git clone git@github.com:hyperrealm/libconfig.git
       cmake .. && make && make install" ]
 
 # clone
-run --mount=type=ssh git clone git@github.com:Unidata/netcdf-c.git
+run git clone git@github.com:Unidata/netcdf-c.git
 
 # build
  run ["bash", "-c", \
@@ -35,7 +35,7 @@ run --mount=type=ssh git clone git@github.com:Unidata/netcdf-c.git
       cmake -DENABLE_DAP=OFF .. && make && make install" ]
 
 # clone
-run --mount=type=ssh git clone git@github.com:Unidata/netcdf-cxx4.git
+run git clone git@github.com:Unidata/netcdf-cxx4.git
 
 # build
  run ["bash", "-c", \
@@ -46,7 +46,7 @@ run --mount=type=ssh git clone git@github.com:Unidata/netcdf-cxx4.git
       cmake .. && make && make install"]
 
 # clone - no build necessary
-run --mount=type=ssh git clone git@github.com:NVIDIA/thrust.git
+run git clone git@github.com:NVIDIA/thrust.git
 
 
 copy entrypoint.sh /entrypoint.sh
