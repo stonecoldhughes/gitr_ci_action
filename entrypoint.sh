@@ -1,5 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
+echo "GITHUB_WORKSPACE = ${GITHUB_WORKSPACE}"
 if test -f "/libconfig"; then
       echo "Captain! libconfig exists!"
 else
