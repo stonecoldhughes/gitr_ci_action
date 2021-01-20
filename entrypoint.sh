@@ -1,7 +1,7 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
 echo "Captain! ${GITHUB_WORKSPACE}"
-pushd /GITR/build && \
+pushd ${GITHUB_WORKSPACE}/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
      -DUSEIONIZATION=0 \
