@@ -45,14 +45,10 @@ pushd ${GITHUB_WORKSPACE}/build && \
      -DFORCE_EVAL=0 \
      -DUSE_SORT=0 \
      -DCHECK_COMPATIBILITY=1 \
-     -DLIBCONFIGPP_INCLUDE_DIR=/libconfig/src/libconfig/lib \
-     -DLIBCONFIG_INCLUDE_DIR=/libconfig/src/libconfig/lib \
-     -DLIBCONFIG_LIBRARY=/libconfig/src/libconfig-build/out/libconfig.so \
-     -DLIBCONFIGPP_LIBRARY=/libconfig/src/libconfig-build/out/libconfig++.so \
-     -DTHRUST_INCLUDE_DIR=/thrust/src/thrust \
-     -DNETCDF_INCLUDE_DIR=/netcdf-c/src/netcdf-c/include \
-     -DNETCDF_CXX_INCLUDE_DIR=/netcdf-cxx4/src/netcdf-cxx4/cxx4 \
+     -DTHRUST_INCLUDE_DIR=/thrust \
+     -DNETCDF_INCLUDE_DIR=/netcdf-c/include \
      -DNETCDF_LIBRARY=/usr/local/lib/libnetcdf.so \
-     -DNETCDF_CXX_LIBRARY=/netcdf-cxx4/src/netcdf-cxx4-build/cxx4/libnetcdf-cxx4.so \
+     -DNETCDF_CXX_INCLUDE_DIR=/usr/local/include \
+     -DNETCDF_CXX_LIBRARY=/usr/local/lib/libnetcdf-cxx4.so \
      .. && make -j 4 && make install
 # Captain! All these file locations are wrong
