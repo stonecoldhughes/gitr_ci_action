@@ -55,7 +55,7 @@ copy entrypoint.sh /entrypoint.sh
 # Captain! for now, make this interactive so you can debug it
 #entrypoint [ "/entrypoint.sh" ]
 
-# Captain! Test garbage below this line. This is where your file digresses from the Github
+# Ahoy, Captain! Test garbage below this line. This is where your file digresses from the Github
 # actions file
 copy [ "GITR", "/GITR" ]
 
