@@ -18,7 +18,7 @@ run [ "bash", "-c", \
 # build repo dependencies
 
 # get libconfig dependency
-copy [ "libconfig", "/libconfig"]
+copy [ "external/libconfig", "/libconfig"]
 
 # obtain cached copy of repo
 # build & install
@@ -30,7 +30,7 @@ run ["bash", "-c", \
       cmake .. && make && make install" ]
 
 
-copy [ "netcdf-c", "/netcdf-c" ]
+copy [ "external/netcdf-c", "/netcdf-c" ]
 # build
  run ["bash", "-c", \
       " \
@@ -39,7 +39,7 @@ copy [ "netcdf-c", "/netcdf-c" ]
       pushd build && \
       cmake -DENABLE_DAP=OFF .. && make && make install" ]
 
-copy [ "netcdf-cxx4", "/netcdf-cxx4" ]
+copy [ "external/netcdf-cxx4", "/netcdf-cxx4" ]
 run ["bash", "-c", \
       " \
       cd netcdf-cxx4 && \
@@ -48,7 +48,7 @@ run ["bash", "-c", \
       cmake .. && make && make install"]
 
 # header-only library - no build necessary
-copy [ "thrust", "/thrust" ]
+copy [ "external/thrust", "/thrust" ]
 
 copy entrypoint.sh /entrypoint.sh
 
