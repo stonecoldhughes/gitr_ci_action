@@ -1,7 +1,6 @@
 from ubuntu:20.04
 
 # Captain! Experiment with renaming this file to something more descriptive than "Dockerfile"
-# Captain! Add a command to remove the *.git directories in the dependencies, if they exist.
 
 # This Dockerfile defines the GITR CI verification step.
 env DEBIAN_FRONTEND noninteractive
@@ -53,4 +52,15 @@ copy [ "external/thrust", "/thrust" ]
 
 copy entrypoint.sh /entrypoint.sh
 
-entrypoint [ "/entrypoint.sh" ]
+# Captain! for now, make this interactive so you can debug it
+#entrypoint [ "/entrypoint.sh" ]
+
+# Ahoy, Captain! Test garbage below this line. This is where your file digresses from the Github
+# actions file
+copy [ "GITR", "/GITR" ]
+
+run [ "bash", "-c", \
+      "apt-get update && \
+      apt-get install -y \
+      tmux \
+      vim"]

@@ -1,6 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
-cd   ${GITHUB_WORKSPACE}/build && \
+cd   /GITR/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
      -DUSEIONIZATION=0 \
