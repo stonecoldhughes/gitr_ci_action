@@ -1,5 +1,6 @@
 #!/bin/bash
 # set this up as an entrypoint bash script.
+ls   ${GITHUB_WORKSPACE}
 cd   ${GITHUB_WORKSPACE}/build && \
      cmake -DUSE_CUDA=0 \
      -DUSE_MPI=1 \
